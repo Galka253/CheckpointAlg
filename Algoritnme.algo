@@ -1,0 +1,22 @@
+ALGORITHM Sentence
+VAR
+    letter: CHAR;
+    letters:INTEGER :=0
+    countV: INTEGER :=0;
+    lenghtS: INTEGER :=0;
+    words: INTEGER :=0;
+    space: INTEGER :=0;
+    
+BEGIN
+    Read (letter)
+    WHILE (letter<>'.') DO 
+    letters := letters + 1;
+    IF (letter='a'or letter='o' or letter='u' or letter='i' or letter='e' or letter='y' or letter='A' or letter='O' or letter='U'or letter='I' or letter='E' or letter='Y') 
+    THEN countV:=countV + 1;
+    IF (letter=' ') THEN words:=words+1 AND space:=space+1;
+    lenghtS:=countV + letters + space;
+    END_WHILE
+    Write('countV');
+    Write('words');
+    Write('lenghtS');
+END
